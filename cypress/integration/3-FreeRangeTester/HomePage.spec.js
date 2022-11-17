@@ -34,4 +34,6 @@ describe("Home de www.freerangetesters.com", () => {
     //cy.wait(2000); //Espera 2 segundos y luego realiza el get
     cy.get('#comp-krjarw4p > [data-testid="linkElement"] > ._1Qjd7').should("exist");
   });
+
+  
 });
