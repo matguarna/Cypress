@@ -22,7 +22,7 @@ describe("Pruebas sobre UI", () => {
     //se puede usar click() pero checkea o descheckea segun como esté el checkbox, es mas exacto check/uncheck
   });
 
-  it("Elegir de un drowdown", () => {
+  it("Elegir de un dropdown", () => {
     cy.contains("Dropdown").click();
     cy.get("#dropdown").select(1); //Se puede pasar el "index" indicandole la posicion, por ejemplo: 1, o el texto exacto de la opcion: "Option 1"
   });
