@@ -1,6 +1,16 @@
 describe("redmine", () => {
   it("Redmine pantalla negra", () => {
-    cy.visit("https://redmine.dguiaf-gcba.gov.ar/login");
+    cy.visit("https://redmine.dguiaf-gcba.gov.ar");
+    // cy.request({
+    //   method: "POST",
+    //   url: "/login",
+    //   //form: true,
+    //   body: {
+    //     username: "mnguarna",
+    //     password: "Enero.2021",
+    //     //login: "Acceder",
+    //   },
+    // });
     cy.get("#username").type("MNGUARNA");
     cy.get("#password").type("Enero.2021");
     cy.get("#autologin").check();
