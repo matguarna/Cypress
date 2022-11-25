@@ -1,4 +1,11 @@
 describe("Loguear - Basic Auth y Auth con forms", () => {
+  //DB Seeding usando el comando task
+  // beforeEach(() => {
+  //   //db:teardown es un nombre que se da para borrar todo lo que estuvimos haciendo
+  //   cy.task("db:teardown"); //Borra todo y deja limpio
+  //   cy.task("db:seeding"); //Carga los datos del db seeding
+  // });
+
   it("Sin loguear", () => {
     cy.visit("https://the-internet.herokuapp.com/basic_auth");
     cy.get("p").should("include.text", "Congratulations");
@@ -20,7 +27,7 @@ describe("Loguear - Basic Auth y Auth con forms", () => {
     cy.get("p").should("include.text", "Congratulations");
   });
 
-  it.only("Hacer login en un form, usando request tipo POST", () => {
+  it("Hacer login en un form, usando request tipo POST", () => {
     cy.visit("https://the-internet.herokuapp.com");
     cy.request({
       method: "POST",

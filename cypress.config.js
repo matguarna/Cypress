@@ -6,6 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-  experimentalSessionAndOrigin: false,
-  experimentalSessionSupport: false,
+  // experimentalSessionAndOrigin: false,
+  // experimentalSessionSupport: false,
 });
