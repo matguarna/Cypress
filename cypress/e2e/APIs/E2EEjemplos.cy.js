@@ -42,4 +42,9 @@ describe("Loguear - Basic Auth y Auth con forms", () => {
     cy.visit("https://the-internet.herokuapp.com/secure");
     cy.get(".subheader").should("include.text", "Welcome to the Secure Area");
   });
+
+  it("Mismo test que arriba pero con comando personalizado - login", () => {
+    cy.login("tomsmith", "SuperSecretPassword!");
+    cy.get(".subheader").should("include.text", "Welcome to the Secure Area");
+  });
 });
