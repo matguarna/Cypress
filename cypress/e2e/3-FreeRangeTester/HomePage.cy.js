@@ -30,10 +30,9 @@ describe("Home de www.freerangetesters.com", () => {
     cy.get("#comp-l02x1m8d1label").should("have.text", "Blog");
   });
 
-  it.only("Existe un boton de 'Empezá a aprender' en el home", () => {
+  it("Existe un boton de 'Empezá a aprender' en el home", () => {
     //cy.wait(2000); //Espera 2 segundos y luego realiza el get
-    cy.get('#comp-krjarw4p > [data-testid="linkElement"] > ._1Qjd7').should("exist");
+    cy.get('#comp-krjarw4p > [data-testid="linkElement"] > ._1Qjd7').as("BotonEmpezar");
+    cy.get("BotonEmpezar").should("exist");
   });
-
-  
 });
